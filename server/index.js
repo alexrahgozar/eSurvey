@@ -27,7 +27,7 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-console.log("test");
+
 // authRoutes(app);
 // billingRoutes(app)
 
