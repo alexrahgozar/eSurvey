@@ -3,7 +3,6 @@ import { FETCH_USER } from "./types";
 
 //only one expression
 export const fetchUser = () => async dispatch => {
-  console.log("here");
   const res = await axios.get("/api/current_user");
   dispatch({ type: FETCH_USER, payload: res.data });
 };
