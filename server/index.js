@@ -7,8 +7,8 @@ var keys = require("./../config/keys");
 require("./../mongoose-database/index");
 require("./../client/src/setupProxy");
 var passportConfig = require("./../services/passport");
-// var authRoutes = require("./../routes/authRoutes");
-// var billingRoutes = require("./../routes/billingRoutes");
+var authRoutes = require("./../routes/authRoutes");
+var billingRoutes = require("./../routes/billingRoutes");
 mongoose.Promise = global.Promise;
 mongoose.connect(
   keys.mongoURI,
@@ -28,19 +28,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// authRoutes(app);
-// billingRoutes(app)
+authRoutes(app);
+billingRoutes(app);
 
-// const proxy = require("http-proxy-middleware");
-//
-// module.exports = function(app) {
-//   app.use(proxy("/auth/*", { target: "http://localhost:5000" }));
-//   app.use(proxy("/auth/google", { target: "http://localhost:5000" }));
-//   app.use(proxy("/api/*", { target: "http://localhost:5000" }));
-// };
-
-require("./../routes/authRoutes")(app);
-require("./../routes/billingRoutes")(app);
+// require("./../routes/authRoutes")(app);
+// require("./../routes/billingRoutes")(app);
 
 if (process.env.NODE_ENV === "production") {
   // if statements:
