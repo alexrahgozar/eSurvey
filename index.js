@@ -4,12 +4,12 @@ var mongoose = require("mongoose");
 var cookieSession = require("cookie-session");
 var passport = require("passport");
 var bodyParser = require("body-parser");
-var keys = require("./../config/keys");
-require("./../mongoose-database/index");
-require("./../client/src/setupProxy");
-var passportConfig = require("./../services/passport");
-var authRoutes = require("./../routes/authRoutes");
-var billingRoutes = require("./../routes/billingRoutes");
+var keys = require("./config/keys");
+require("./mongoose-database/index");
+require("./client/src/setupProxy");
+var passportConfig = require("./services/passport");
+var authRoutes = require("./routes/authRoutes");
+var billingRoutes = require("./routes/billingRoutes");
 mongoose.Promise = global.Promise;
 mongoose.connect(
   keys.mongoURI,
