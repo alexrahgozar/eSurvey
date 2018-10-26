@@ -5,11 +5,13 @@ var cookieSession = require("cookie-session");
 var passport = require("passport");
 var bodyParser = require("body-parser");
 var keys = require("./config/keys");
-require("./mongoose-database/index");
+require("./mongoose-database/User");
+require("./mongoose-database/Survey");
 require("./client/src/setupProxy");
 var passportConfig = require("./services/passport");
 var authRoutes = require("./routes/authRoutes");
 var billingRoutes = require("./routes/billingRoutes");
+var surveyRoutes = require("./routes/surveyRoutes");
 mongoose.Promise = global.Promise;
 mongoose.connect(
   keys.mongoURI,
@@ -31,6 +33,7 @@ app.use(passport.session());
 
 authRoutes(app);
 billingRoutes(app);
+surveyRoutes(app);
 
 // require("./../routes/authRoutes")(app);
 // require("./../routes/billingRoutes")(app);
