@@ -9,9 +9,9 @@ require("./mongoose-database/User");
 require("./mongoose-database/Survey");
 require("./client/src/setupProxy");
 var passportConfig = require("./services/passport");
-var authRoutes = require("./routes/authRoutes");
-var billingRoutes = require("./routes/billingRoutes");
-var surveyRoutes = require("./routes/surveyRoutes");
+// var authRoutes = require("./routes/authRoutes");
+// var billingRoutes = require("./routes/billingRoutes");
+// var surveyRoutes = require("./routes/surveyRoutes");
 mongoose.Promise = global.Promise;
 mongoose.connect(
   keys.mongoURI,
@@ -31,9 +31,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-authRoutes(app);
-billingRoutes(app);
-surveyRoutes(app);
+// authRoutes(app);
+// billingRoutes(app);
+// surveyRoutes(app);
+require("./routes/authRoutes")(app);
+require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 // require("./../routes/authRoutes")(app);
 // require("./../routes/billingRoutes")(app);
@@ -47,7 +50,7 @@ if (process.env.NODE_ENV === "production") {
 
   app.get("*", (req, res) => {
     console.log("okay: ", __dirname);
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
   });
 }
 
