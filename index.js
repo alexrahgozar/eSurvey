@@ -1,4 +1,3 @@
-const path = require("path");
 var express = require("express");
 var mongoose = require("mongoose");
 var cookieSession = require("cookie-session");
@@ -47,6 +46,7 @@ if (process.env.NODE_ENV === "production") {
 
   // Express will serve up the index.html file
   // if it doesn't recognize the route
+  const path = require("path");
 
   app.get("*", (req, res) => {
     console.log("okay: ", __dirname);
