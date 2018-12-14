@@ -18,13 +18,6 @@ module.exports = app => {
     res.send(feedbackSurveys);
   });
 
-  app.get(
-    "https://stark-earth-90912.herokuapp.com/api/surveys/:surveyId/:choice",
-    (req, res) => {
-      res.send("Thank You For Voting!");
-    }
-  );
-
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
     res.send("Thank You For Voting!");
   });
