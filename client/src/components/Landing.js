@@ -5,9 +5,10 @@ const Landing = () => {
   return (
     <div style={{ textAlign: "center" }}>
       <h1 style={{ fontSize: "30px" }}>
-        eSurvey Provides Business The Best Result On Performance
+        eSurvey Provides Small Businesses Services That Will Transform
+        Performance
       </h1>
-      To Start Collecting Feedback From Your Customers Please Login.
+      To Start Transforming Your Business Please Login.
     </div>
   );
 };
