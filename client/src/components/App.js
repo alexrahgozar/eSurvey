@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="container">
         <BrowserRouter>
-          <div>
+          <div style={{ backgroundColor: "#dfe3ee" }}>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />

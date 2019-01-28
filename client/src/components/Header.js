@@ -31,12 +31,12 @@ class Header extends Component {
     // console.log("Reducer: ", this.props);
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper" style={{ backgroundColor: "#3b5998" }}>
           <Link
             to={this.props.auth ? "/surveys" : "/"}
             className="left brand-logo"
           >
-            Survey.com
+            eSurvey.com
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </div>
