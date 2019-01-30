@@ -15,15 +15,56 @@ class SurveyList extends Component {
           key={survey._id}
         >
           <div className="card-content">
-            <span className="card-title">{survey.title}</span>
-            <p style={{ fontFamily: "HelveticaNeue" }}>{survey.body}</p>
-            <p style={{ color: "blue" }} className="right">
+            <span
+              className="card-title"
+              style={{
+                color: "black",
+                fontFamily: "Times",
+                fontSize: "25px",
+                textDecoration: "underline"
+              }}
+            >
+              {survey.title}
+            </span>
+            <p
+              style={{
+                color: "black",
+                fontFamily: "HelveticaNeue",
+                fontSize: "20px"
+              }}
+            >
+              {survey.body}
+            </p>
+            <p
+              style={{
+                color: "blue",
+                fontFamily: "Times",
+                fontSize: "18px"
+              }}
+              className="right"
+            >
               Sent On: {new Date(survey.dateSent).toLocaleDateString()}
             </p>
           </div>
           <div className="card-action">
-            <a style={{ color: "blue" }}>Yes votes: {survey.yes} </a>
-            <a style={{ color: "blue" }}>No votes: {survey.no} </a>
+            <a
+              style={{
+                color: "blue",
+                fontFamily: "Times",
+                fontSize: "22px"
+              }}
+            >
+              Yes votes: {survey.yes}{" "}
+            </a>
+            <a
+              style={{
+                color: "blue",
+                fontFamily: "Times",
+                fontSize: "22px"
+              }}
+            >
+              No votes: {survey.no}{" "}
+            </a>
           </div>
         </div>
       );

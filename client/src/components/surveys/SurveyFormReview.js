@@ -15,8 +15,8 @@ const SurveyFormReview = ({
   const userReviewFields = _.map(formFieldsData, ({ name, label }) => {
     return (
       <div key={name}>
-        <label>{label}</label>
-        <div>{formValues[name]}</div>
+        <label style={{ fontSize: "23px" }}>{label}</label>
+        <div style={{ fontSize: "20px" }}>{formValues[name]}</div>
       </div>
     );
   });
