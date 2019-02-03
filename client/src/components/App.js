@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="container">
         <BrowserRouter>
-          <div style={{ borderRadius: "25px", backgroundColor: "#dfe3ee" }}>
+          <div style={{ borderRadius: "25px", backgroundColor: "lightblue" }}>
             <Header />
             <Route exact path="/" component={Landing} />
             <Route exact path="/surveys" component={Dashboard} />

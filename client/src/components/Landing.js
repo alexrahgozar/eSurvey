@@ -3,12 +3,17 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ backgroundColor: "lightblue", textAlign: "center" }}>
       <h1 style={{ fontSize: "30px" }}>
-        eSurvey Provides Small Businesses Services That Will Transform
+        eSurvey
+        <br />
+        Provides Small Businesses <br />
+        Services That Will Transform <br />
         Performance
       </h1>
-      To Start Transforming Your Business Please Login.
+      <h5 style={{ marginTop: "35%" }}>
+        To Start Transforming Your Business Please Login.
+      </h5>
     </div>
   );
 };
